@@ -1,6 +1,6 @@
 class City:
 
-    def __init__(self, country, name, population, review, sights, id=None):
+    def __init__(self, country, name, population, review, sights, id = None):
         self.country = country
         self.name = name
         self.population = population
