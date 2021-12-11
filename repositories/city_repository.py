@@ -30,7 +30,7 @@ def select_all():
 
 def select(id):
     city = None
-    sql = "SELECT * FROM books WHERE id = %s"
+    sql = "SELECT * FROM cities WHERE id = %s"
     values = [id]
     result = run_sql(sql, values)[0]
 
@@ -39,3 +39,22 @@ def select(id):
         city = City(country, result['name'],
                     result['population'], result['review'], result["sights"], result['id'])
     return city
+
+
+def delete_all():
+    sql = "DELETE FROM cities"
+    run_sql(sql)
+
+
+def delete(id):
+    sql = "DELETE FROM cities WHERE id = %s"
+    values = [id]
+    run_sql(sql, values)
+
+
+def update(city):
+    sql = "UPDATE cities SET (country_id, name, population, review, sights) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    values = [city.country.id, city.name,
+              city.population, city.review, city.sights, city.id]
+    # print(values)
+    run_sql(sql, values)
