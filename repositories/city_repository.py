@@ -6,9 +6,9 @@ import repositories.country_repository as country_repository
 
 
 def save(city):
-    sql = "INSERT INTO cities (country_id, name, population, review, sights) VALUES (%s, %s, %s, %s, %s) RETURNING id"
+    sql = "INSERT INTO cities (country_id, name, population, review, sights, visited) VALUES (%s, %s, %s, %s, %s, %s) RETURNING id"
     values = [city.country.id, city.name,
-              city.population, city.review, city.sights]
+              city.population, city.review, city.sights,city.visited]
     results = run_sql(sql, values)
     city.id = results[0]['id']
     return city
@@ -23,7 +23,7 @@ def select_all():
     for row in results:
         country = country_repository.select(row['country_id'])
         city = City(country, row['name'],
-                    row['population'], row['review'], row["sights"], row['id'])
+                    row['population'], row['review'], row["sights"], row['visited'],row['id'])
         cities.append(city)
     return cities
 
@@ -37,7 +37,7 @@ def select(id):
     if result is not None:
         country = country_repository.select(result['country_id'])
         city = City(country, result['name'],
-                    result['population'], result['review'], result["sights"], result['id'])
+                    result['population'], result['review'], result["sights"],result['visited'], result['id'])
     return city
 
 
@@ -53,8 +53,8 @@ def delete(id):
 
 
 def update(city):
-    sql = "UPDATE cities SET (country_id, name, population, review, sights) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE cities SET (country_id, name, population, review, sights) = (%s, %s, %s, %s, %s, %s) WHERE id = %s"
     values = [city.country.id, city.name,
-              city.population, city.review, city.sights, city.id]
+              city.population, city.review, city.sights,city.visited, city.id]
     # print(values)
     run_sql(sql, values)
