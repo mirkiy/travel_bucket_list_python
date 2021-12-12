@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
-from werkzeug.utils import redirect
 from models.city import City
 # from models.country import Country
 
