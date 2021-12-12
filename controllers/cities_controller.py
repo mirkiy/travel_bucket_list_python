@@ -14,4 +14,4 @@ cities_blueprint = Blueprint("cities", __name__)
 @cities_blueprint.route("/to_visit")
 def cities():
     cities = city_repository.select_all()
-    return render_template("cities/index.html")
+    return render_template("cities/index.html", all_cities=cities)
