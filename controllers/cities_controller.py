@@ -22,4 +22,4 @@ def cities():
 @cities_blueprint.route("/cities/new_city", methods=['GET'])
 def new_city():
     countries = country_repository.select_all()
-    return render_template("cities/new.html", all_countries=countries)
+    return render_template("cities/new_city.html", all_countries=countries)

@@ -1,15 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 
-<form action="/cities/{{city.id}}/edit" method="post">
+<form action="/cities" method="post">
 
     <div>
-        <label for="name">City name: </label>
+        <label for="name">City name:</label>
         <input type="text" id="name" name="name" value="{{city.name}}" required>
     </div>
 
     <div>
-        <label for="country">Country: </label>
+        <label for="country">Country:</label>
         <select id="country" name="country_id">
             {% for country in all_countries %}
             <option value="{{ country.id }}" {% if city.country.id==country.id %} selected="selected" {% endif %}>
@@ -18,24 +18,24 @@
             {% endfor %}
         </select>
     </div>
-    
+
     <div>
         <label for="visited">Visited:</label>
         <select id="visited" name="visited">
-    
+
             <option value="true" {% if city.visited==True %} selected="selected" {% endif %}>
                 True
             </option>
-    
+
             <option value="false" {% if city.visited==False %} selected="selected" {% endif %}>
                 False
             </option>
-    
+
         </select>
     </div>
 
     <div>
-        <label for="population">Population: </label>
+        <label for="population">Population:</label>
         <input type="text" id="population" name="population" value="{{city.population}}" required autofocus>
     </div>
 
@@ -44,11 +44,11 @@
         <input type="number" id="review" name="review" value="{{city.review}}" required>
     </div>
 
-      <div>
-        <label for="sights">Sights:</label>
+    <div>
+        <label for="sights">Sights: </label>
         <input type="text" id="sights" name="sights" value="{{city.sigths}}" required>
     </div>
-  
+
     <button type="submit">update</button>
 
 </form>
