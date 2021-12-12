@@ -1,7 +1,7 @@
 from flask import Flask, render_template
 from flask import Blueprint
 from models.city import City
-from models.country import Country
+# from models.country import Country
 
 import repositories.city_repository as city_repository
 

@@ -62,6 +62,6 @@ def cities(country):
 
     for row in results:
         city = City(row['country_id'], row['name'],
-                    row['population'], row['review'], row['sight'], row['id'])
+                    row['population'], row['review'], row['sight'], row['visited'], row['id'])
         cities.append(city)
     return cities
