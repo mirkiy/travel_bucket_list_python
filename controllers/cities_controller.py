@@ -10,8 +10,8 @@ cities_blueprint = Blueprint("cities", __name__)
 
 
 # homepage route
-# GET '/to visit'
-@cities_blueprint.route("/to_visit")
+# GET '/cities'
+@cities_blueprint.route("/cities")
 def cities():
     cities = city_repository.select_all()
     return render_template("cities/index.html", all_cities=cities)
