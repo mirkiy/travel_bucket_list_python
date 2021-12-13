@@ -92,4 +92,4 @@ def visited_cities():
 @cities_blueprint.route("/cities/to_visit")
 def to_visit_cities():
     cities = city_repository.select_to_visit()
-    return render_template("cities/visited.html", all_cities=cities)
+    return render_template("cities/to_visit.html", all_cities=cities)

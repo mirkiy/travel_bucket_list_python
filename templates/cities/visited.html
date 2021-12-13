@@ -10,9 +10,9 @@
     <a href="/cities/to_visit">CITIES TO SEE</a>
 
 </nav>
-
+<div class="container">
 {% for city in all_cities %}
-<div class="city_card_visited">
+<div class="city_card">
 
     <div class="city_card_heading">
         <h1>{{city.name}}</h1>
@@ -36,4 +36,6 @@
     </div>
     
 {% endfor %}
+
+</div>
 {% endblock %}
