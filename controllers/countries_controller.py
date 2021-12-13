@@ -15,8 +15,6 @@ def countries():
     return render_template("countries/index.html", all_countries=countries)
 
 # GET 'countries/new_country'
-
-
 @countries_blueprint.route("/countries/new_country", methods=['GET'])
 def new_country():
     countries = country_repository.select_all()
@@ -24,8 +22,6 @@ def new_country():
 
 # CREATE
 # POST '/countries'
-
-
 @countries_blueprint.route("/countries", methods=['POST'])
 def create_country():
     name = request.form['name']
