@@ -58,3 +58,31 @@ def update(city):
               city.population, city.review, city.sights, city.visited, city.id]
 
     run_sql(sql, values)
+
+
+def select_all_visited():
+    cities = []
+
+    sql = "SELECT * FROM cities WHERE visited = True"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repository.select(row['country_id'])
+        city = City(country, row['name'],
+                    row['population'], row['review'], row["sights"], row['id'])
+        cities.append(city)
+    return cities
+
+
+def select_to_visit():
+    cities = []
+
+    sql = "SELECT * FROM cities WHERE visited = False"
+    results = run_sql(sql)
+
+    for row in results:
+        country = country_repository.select(row['country_id'])
+        city = City(country, row['name'],
+                    row['population'], row['review'], row["sights"], row['id'])
+        cities.append(city)
+    return cities

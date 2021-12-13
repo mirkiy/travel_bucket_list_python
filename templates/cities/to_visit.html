@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<nav class="nav_destinations">
+    <a href="/">HOME</a>
+    <a href="/cities">CITIES</a>
+    <a href="/countries">COUNTRIES</a>
+    <a href="/cities/new_city">ADD NEW CITY</a>
+    <a href="/cities/visited">VISITED CITIES</a>
+    <a href="/cities/to_visit">CITIES TO SEE</a>
+
+</nav>
+
+{% for city in all_cities %}
+<div class="city_card_visited">
+
+    <div class="city_card_heading">
+        <h1>{{city.name}}</h1>
+        <h2>{{city.country.name}}</h2>
+    </div>
+
+    <div class="btn_visited">
+        {% if city.visited == True %}
+        <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
+        {% else %}
+        <i class="fa fa-times fa-2x" aria-hidden="true"></i>
+        {% endif %}
+    </div>
+
+    <div class="city_content_card">
+        <ul>
+            <li>Population:{{city.population}}</li>
+            <li>Review:{{city.review}}</li>
+            <li>Sights:{{city.sights}}</li>
+        </ul>
+    </div>
+
+    {% endfor %}
+    {% endblock %}

@@ -75,3 +75,21 @@ def update_city(id):
 def delete_city(id):
     city_repository.delete(id)
     return redirect('/cities')
+
+# show only visited cities
+# GET '/cities/visited'
+
+
+@cities_blueprint.route("/cities/visited")
+def visited_cities():
+    cities = city_repository.select_all_visited()
+    return render_template("cities/visited.html", all_cities=cities)
+
+# show not visited cities
+# GET '/cities/to_visit
+
+
+@cities_blueprint.route("/cities/to_visit")
+def to_visit_cities():
+    cities = city_repository.select_to_visit()
+    return render_template("cities/visited.html", all_cities=cities)
