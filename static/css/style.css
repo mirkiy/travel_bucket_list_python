@@ -1,0 +1,22 @@
+:root {
+  --navigation-color: #969490;
+  --hover-color: #e57a7a;
+  --default-font-family: "Raleway", sans-serif;
+}
+
+body {
+  background-image: url(../images/travel.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+h1,
+h2 {
+  font-family: var(--default-font-family);
+  color: #585144;
+  font-weight: 400;
+  text-align: center;
+  line-height: 1.5;
+  transition: all 1s ease-in-out;
+}

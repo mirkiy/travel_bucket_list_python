@@ -51,7 +51,7 @@ def edit_city(id):
     return render_template('cities/edit.html', city=city, all_countries=countries)
 
 # UPDATE
-# PUT 'cities/<id>'
+# UPDATE 'cities/<id>'
 
 
 @cities_blueprint.route("/cities/<id>/edit", methods=['POST'])
