@@ -1,13 +1,17 @@
 {% extends 'base.html' %}
 {% block content %}
-    
-{% for country in all_countries %}
-<div class="country_card">
+   
+<a href="/countries/new_country">
+    <button class="btn_add_new_country"> ADD NEW COUNTRY </button>
+    </a>
 
+    {% for country in all_countries %}
+
+<div class="country_card">
     <div class="country_card_heading">
         <h1>{{country.name}}</h1>
         <h2>{{country.capital}}</h2>
     </div>
-        
+</div>   
     {% endfor %}
 {% endblock %}
