@@ -17,7 +17,6 @@ h1,
 h2 {
   font-family: var(--default-font-family);
   color: var(--heading-color);
-  /* color: var(--main-font-color); */
   font-weight: 400;
   text-align: center;
   line-height: 1;
@@ -44,14 +43,17 @@ h2 {
   margin: 30px;
   text-align: center;
   padding: 10px;
-  background: rgba(136, 111, 165, 0.4);
+  /* background: rgba(136, 111, 165, 0.4); */
+  background: rgba(48, 38, 59, 0.6);
   border-radius: 5px;
-  color: aliceblue;
+  color: var(--main-font-color);
+
   /* border: 1px solid rgb(111, 97, 117); */
 }
 
 .city_content_card ul {
   list-style: none;
   text-align: left;
-  color: aliceblue;
+
+  /* color: var(--main-font-color); */
 }

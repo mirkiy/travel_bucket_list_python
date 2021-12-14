@@ -4,3 +4,21 @@
   flex-wrap: wrap;
   margin-top: 40px;
 }
+
+.nav_destinations {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+}
+
+.nav_destinations a {
+  margin: 20px;
+  border-radius: 4px;
+  padding: 20px 15px;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+.nav_destinations a:hover {
+  color: white;
+  cursor: pointer;
+}
