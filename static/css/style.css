@@ -34,11 +34,17 @@ h2 {
   line-height: 15px;
   padding-top: 7px;
 }
-
 .city_card {
+  margin: 30px;
+  text-align: center;
+  padding: 10px;
+  background: rgba(136, 111, 165, 0.4);
+  border-radius: 5px;
+  /* border: 1px solid rgb(111, 97, 117); */
 }
 
-li .city_content_card {
+.city_content_card ul {
+  list-style: none;
   text-decoration: none;
 }
 /* h1 .city_card_heading {
