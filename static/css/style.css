@@ -1,7 +1,7 @@
 :root {
   --navigation-color: #969490;
-  --hover-color: #e57a7a;
-  --heading-color: #585144;
+  --hover-color: #a2aeaf;
+  --heading-color: #73697e;
   --default-font-family: "Raleway", sans-serif;
 }
 
@@ -21,6 +21,26 @@ h2 {
   line-height: 1;
   transition: all 1s ease-in-out;
 }
-/* .container {
+.main_page {
+  margin-top: 85px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  height: 15px;
+  line-height: 15px;
+  padding-top: 7px;
+}
 
+.city_card {
+}
+
+li .city_content_card {
+  text-decoration: none;
+}
+/* h1 .city_card_heading {
+  font-size: 35px;
 } */

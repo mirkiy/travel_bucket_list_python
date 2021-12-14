@@ -1,10 +1,12 @@
 {% extends 'base.html'%}
 
 {% block content %}
-<h1> My travel list!</h1>
+<div class="main_page">
+<h1> MY TRAVEL LIST</h1>
 <nav class="nav_destinations_main">
-    <a href="/cities"><button class="btn_cities">CITIES</button></a>
-    <a href="/countries"><button class="btn_countries_list">COUNTRIES</button></a>
-    <a href="/cities/new_city"><button class="btn_add_new_city">ADD NEW CITY</button></a>
+    <a href="/cities"><button class="btn_nav_main">CITIES</button></a>
+    <a href="/countries"><button class="btn_nav_main">COUNTRIES</button></a>
+    <a href="/cities/new_city"><button class="btn_nav_main">ADD NEW CITY</button></a>
 </nav>
+</div>
 {% endblock %}

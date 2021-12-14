@@ -1,34 +1,14 @@
-.btn_cities {
+.btn_nav_main {
   border: 0.8px rgb(199, 206, 207) solid;
   border-radius: 5px;
   padding: 10px 20px;
   margin-right: 15px;
   text-align: center;
-  background-color: #a78f8e;
-  /* color: #878787; */
+  background-color: #9f97a7;
   color: whitesmoke;
   transition-duration: 0.4s;
 }
-
-.btn_countries_list {
-  border: 0.8px rgb(199, 206, 207) solid;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 15px;
-  text-align: center;
-  background-color: #a78f8e;
-  /* color: #878787; */
-  color: whitesmoke;
-  transition-duration: 0.4s;
-}
-.btn_add_new_city {
-  border: 0.8px rgb(199, 206, 207) solid;
-  border-radius: 5px;
-  padding: 10px 20px;
-  margin-right: 15px;
-  text-align: center;
-  background-color: #a78f8e;
-  /* color: #878787; */
-  color: whitesmoke;
-  transition-duration: 0.4s;
+.btn_nav_main:hover {
+  background-color: var(--hover-color);
+  cursor: pointer;
 }
