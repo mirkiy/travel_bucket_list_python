@@ -69,7 +69,7 @@ def select_all_visited():
     for row in results:
         country = country_repository.select(row['country_id'])
         city = City(country, row['name'],
-                    row['population'], row['review'], row["sights"], row['id'])
+                    row['population'], row['review'], row["sights"], row['visited'], row['id'])
         cities.append(city)
     return cities
 
@@ -83,6 +83,6 @@ def select_to_visit():
     for row in results:
         country = country_repository.select(row['country_id'])
         city = City(country, row['name'],
-                    row['population'], row['review'], row["sights"], row['id'])
+                    row['population'], row['review'], row["sights"], row['visited'], row['id'])
         cities.append(city)
     return cities

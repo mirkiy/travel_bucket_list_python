@@ -20,12 +20,8 @@
     </div>
 
     <div class="btn_visited">
-        {% if city.visited == True %}
-        <i class="fa fa-check fa-2x" style="color:green" aria-hidden="true"></i>
-        {% else %}
         <i class="fa fa-times fa-2x" aria-hidden="true"></i>
-        {% endif %}
-    </div>
+    </div> 
 
     <div class="city_content_card">
         <ul>
@@ -38,5 +34,5 @@
     {% endfor %}
 
     </div>
-    
+
     {% endblock %}
