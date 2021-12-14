@@ -1,6 +1,7 @@
 :root {
   --navigation-color: #969490;
   --hover-color: #a2aeaf;
+  --main-font-color: aliceblue;
   --heading-color: #73697e;
   --default-font-family: "Raleway", sans-serif;
 }
@@ -16,10 +17,15 @@ h1,
 h2 {
   font-family: var(--default-font-family);
   color: var(--heading-color);
+  /* color: var(--main-font-color); */
   font-weight: 400;
   text-align: center;
   line-height: 1;
   transition: all 1s ease-in-out;
+}
+.city_card h1,
+h2 {
+  color: var(--main-font-color);
 }
 .main_page {
   margin-top: 85px;
@@ -40,13 +46,12 @@ h2 {
   padding: 10px;
   background: rgba(136, 111, 165, 0.4);
   border-radius: 5px;
+  color: aliceblue;
   /* border: 1px solid rgb(111, 97, 117); */
 }
 
 .city_content_card ul {
   list-style: none;
-  text-decoration: none;
+  text-align: left;
+  color: aliceblue;
 }
-/* h1 .city_card_heading {
-  font-size: 35px;
-} */
