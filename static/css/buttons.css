@@ -12,3 +12,6 @@
   background-color: var(--hover-color);
   cursor: pointer;
 }
+.trash-button {
+  display: contents;
+}
