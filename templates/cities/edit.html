@@ -8,7 +8,7 @@
     <a href="/cities/new_city">ADD NEW CITY</a>
 </nav>
 
-
+<div class="form_container">
 <form action="/cities/{{city.id}}/edit" method="post">
 
     <div>
@@ -57,8 +57,8 @@
         <input type="text" id="sights" name="sights" value="{{city.sigths}}" required>
     </div>
   
-    <button type="submit">update</button>
+    <input type="submit" value="update">
 
 </form>
-
+</div>
 {% endblock %}
