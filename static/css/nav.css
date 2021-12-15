@@ -19,6 +19,6 @@
   text-transform: capitalize;
 }
 .nav_destinations a:hover {
-  color: white;
+  color: rgb(110, 94, 110);
   cursor: pointer;
 }
