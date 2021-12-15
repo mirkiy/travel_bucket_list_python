@@ -15,3 +15,8 @@
 .trash-button {
   display: contents;
 }
+.update_btn {
+  border: none;
+  border-radius: 4px;
+  background-color: thistle;
+}
