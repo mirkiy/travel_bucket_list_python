@@ -1,0 +1,35 @@
+/* country form */
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type="submit"] {
+  width: 100%;
+  background-color: thistle;
+  color: var(--main-font-color);
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--hover-color);
+}
+
+.country_container {
+  margin: auto;
+  margin-top: 30px;
+  width: 50%;
+  border-radius: 5px;
+  background: rgba(48, 38, 59, 0.6);
+  padding: 20px;
+}
