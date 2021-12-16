@@ -47,6 +47,7 @@ city_repository.save(city6)
 
 city7 = City(country5, "Hanoi", 4870000, 5,
              "one of the most ancient capitals in the world", False)
+city_repository.save(city7)
 
 
 pdb.set_trace()
